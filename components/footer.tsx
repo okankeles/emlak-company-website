@@ -116,7 +116,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="flex-shrink-0 mt-1 text-accent" />
                 <span className="text-sm text-primary-foreground/80">
-                  Maslak Mahallesi, Büyükdere Caddesi No:123, Sarıyer/İstanbul
+                  Merkez mahallesi Namık Kemal caddesi no 61/3 Avcılar
                 </span>
               </li>
               <li className="flex items-center gap-3">
