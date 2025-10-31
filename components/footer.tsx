@@ -121,11 +121,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="flex-shrink-0 text-accent" />
-                <span className="text-sm text-primary-foreground/80">+90 (212) 555 0000</span>
+                <span className="text-sm text-primary-foreground/80">+90 535 206 45 96</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="flex-shrink-0 text-accent" />
-                <span className="text-sm text-primary-foreground/80">info@arsaplusinsaat.com.tr</span>
+                <span className="text-sm text-primary-foreground/80">Arsaplusinsaat@gmail.com</span>
               </li>
             </ul>
           </div>
