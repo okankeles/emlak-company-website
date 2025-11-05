@@ -74,8 +74,7 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
 
-        {/* (İstersen responsive sınıf fallback'ı) */}
-        {/* <motion.div className="absolute bottom-6 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-14 2xl:bottom-16 left-1/2 -translate-x-1/2">...</motion.div> */}
+        <motion.div className="absolute bottom-6 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-14 2xl:bottom-16 left-1/2 -translate-x-1/2">...</motion.div>
       </div>
     </section>
   )
