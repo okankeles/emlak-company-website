@@ -140,11 +140,11 @@ export default function AboutPage() {
                 {[
                   {
                     name: "Murat Alüste",
-                    role: "Kurucu & Genel Müdür",
+                    role: "Kurucu & İnşaat Mühendisi",
                   },
                   {
                     name: "Erkan Keleş",
-                    role: "İnşaat Müdürü",
+                    role: "Genel Direktör",
                   },
                 ].map((member, index) => (
                   <Card key={index} className="border-border text-center">
