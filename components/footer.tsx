@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <Image
-                src="/aplus_insaat_circle.png"
+                src="okankeles/emlak-company-website/public/aplus_insaat_logo_transparent.png"
                 alt="ARS A Plus İnşaat"
                 width={50}
                 height={50}
