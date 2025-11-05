@@ -11,26 +11,15 @@ export function CTASection() {
 
       <div className="container px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Hayalinizdeki Mülkü Birlikte Bulalım
-          </h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-balance">İletişime Geçin</h2>
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 text-pretty leading-relaxed">
-            Uzman ekibimiz size en uygun gayrimenkul çözümlerini sunmak için hazır. Hemen iletişime geçin, ücretsiz
-            danışmanlık hizmetimizden yararlanın.
+            Sorularınız ve projeleriniz için bizimle iletişime geçin. Profesyonel ekibimiz size en uygun çözümleri
+            sunmaya hazır.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 py-6 group">
-              Ücretsiz Danışmanlık
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm text-base px-8 py-6"
-            >
-              +90 (212) 555 0000
-            </Button>
-          </div>
+          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 py-6 group">
+            İletişime Geç
+            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+          </Button>
         </div>
       </div>
     </section>

@@ -1,23 +1,23 @@
-import { Building2, Key, Wrench, FileCheck } from "lucide-react"
+import { Building2, Key, FileCheck, RotateCcw } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 const services = [
   {
-    icon: Building2,
-    title: "Gayrimenkul Alım-Satım",
-    description: "Türkiye'nin tüm bölgelerinde geniş portföyümüz ile hayalinizdeki mülkü bulmanıza yardımcı oluyoruz.",
-  },
-  {
-    icon: Key,
-    title: "Konut Kiralama",
+    icon: RotateCcw,
+    title: "Kentsel Dönüşüm",
     description:
-      "Güvenli ve profesyonel kiralama hizmetleri ile mülk sahipleri ve kiracılar için en uygun koşulları sağlıyoruz.",
+      "Eski binaların modern standartlara uyarlanması ve şehirlerin yeniden hayata döndürülmesi projelerinde öncü konumdayız.",
   },
   {
-    icon: Wrench,
+    icon: Building2,
     title: "İnşaat Projeleri",
     description:
       "Modern mimari anlayışla, yüksek kalite standartlarında inşaat projelerimiz hakkında detaylı bilgi alabilirsiniz.",
+  },
+  {
+    icon: Key,
+    title: "Gayrimenkul Alım-Satım",
+    description: "Türkiye'nin tüm bölgelerinde geniş portföyümüz ile hayalinizdeki mülkü bulmanıza yardımcı oluyoruz.",
   },
   {
     icon: FileCheck,
@@ -33,9 +33,6 @@ export function ServicesSection() {
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">Hizmetlerimiz</h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            15 yıllık tecrübemiz ile Home Estate Global'e danışmadan ev satın almayın
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

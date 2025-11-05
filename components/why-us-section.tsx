@@ -14,8 +14,8 @@ const reasons = [
   },
   {
     icon: Users,
-    title: "Yaygın Network Ağı",
-    description: "Türkiye'nin birçok bölgesinde bulunan çalışma arkadaşlarımız ile sizlere hizmet veriyoruz.",
+    title: "Profesyonel Ekip",
+    description: "Sektör deneyimi yüksek profesyonel ekibimiz her zaman sizin yanınızda olacaktır.",
   },
   {
     icon: Clock,

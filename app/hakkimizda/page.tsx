@@ -92,8 +92,9 @@ export default function AboutPage() {
                   <Target className="w-12 h-12 text-accent mb-4" />
                   <h3 className="font-serif text-2xl font-bold text-primary mb-4">Misyonumuz</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Müşterilerimize en kaliteli gayrimenkul hizmetini sunarak, hayallerindeki yaşam alanlarına
-                    kavuşmalarını sağlamak ve sektörde güvenilir bir marka olmak.
+                    Kentsel dönüşüm projeleriyle şehrin dokusuna değer katmak, güvenli, estetik ve sürdürülebilir yaşam
+                    alanları inşa etmek. Her adımda modern teknolojiyi ve güçlü iletişimi merkeze alarak, insan odaklı
+                    çözümler üretmek.
                   </p>
                 </CardContent>
               </Card>
@@ -103,8 +104,8 @@ export default function AboutPage() {
                   <Eye className="w-12 h-12 text-accent mb-4" />
                   <h3 className="font-serif text-2xl font-bold text-primary mb-4">Vizyonumuz</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Türkiye'nin en güvenilir ve tercih edilen gayrimenkul şirketi olmak, yenilikçi projelerle sektöre
-                    yön vermek ve uluslararası arenada tanınan bir marka haline gelmek.
+                    Geleceğin şehirlerini bugünden şekillendiren, yenilikçi ve güvenilir bir inşaat markası olmak.
+                    Modern tasarım anlayışıyla, her projede kaliteyi, güveni ve sürdürülebilirliği ön planda tutmak.
                   </p>
                 </CardContent>
               </Card>
@@ -134,38 +135,26 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Ahmet Yılmaz",
-                  role: "Genel Müdür",
-                  image: "/professional-businessman-portrait.png",
-                },
-                {
-                  name: "Ayşe Demir",
-                  role: "Satış Direktörü",
-                  image: "/professional-businesswoman-portrait.png",
-                },
-                {
-                  name: "Mehmet Kaya",
-                  role: "Proje Müdürü",
-                  image: "/professionals/architect-1.png",
-                },
-              ].map((member, index) => (
-                <Card key={index} className="overflow-hidden border-border group">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <CardContent className="p-6 text-center">
-                    <h3 className="font-serif text-xl font-bold text-primary mb-2">{member.name}</h3>
-                    <p className="text-muted-foreground">{member.role}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {[
+                  {
+                    name: "Murat Alüste",
+                    role: "Kurucu & Genel Müdür",
+                  },
+                  {
+                    name: "Erkan Keleş",
+                    role: "İnşaat Müdürü",
+                  },
+                ].map((member, index) => (
+                  <Card key={index} className="border-border text-center">
+                    <CardContent className="p-8">
+                      <h3 className="font-serif text-xl font-bold text-primary mb-2">{member.name}</h3>
+                      <p className="text-muted-foreground">{member.role}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>

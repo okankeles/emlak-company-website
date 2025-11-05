@@ -45,9 +45,9 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-primary mb-1">Adres</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Maslak Mahallesi, Büyükdere Caddesi No: 123
+                          Merkez Mahallesi Namık Kemal Caddesi No:61/3
                           <br />
-                          Sarıyer, İstanbul 34398
+                          Avcılar/İstanbul
                         </p>
                       </div>
                     </div>
@@ -58,8 +58,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-primary mb-1">Telefon</h3>
-                        <p className="text-sm text-muted-foreground">+90 (212) 123 45 67</p>
-                        <p className="text-sm text-muted-foreground">+90 (532) 123 45 67</p>
+                        <p className="text-sm text-muted-foreground">+90 535 206 45 96</p>
                       </div>
                     </div>
 
@@ -69,8 +68,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-primary mb-1">E-posta</h3>
-                        <p className="text-sm text-muted-foreground">info@arsaplus.com</p>
-                        <p className="text-sm text-muted-foreground">satis@arsaplus.com</p>
+                        <p className="text-sm text-muted-foreground">arsaplusinsaat@gmail.com.tr</p>
                       </div>
                     </div>
 
@@ -107,7 +105,7 @@ export default function ContactPage() {
           <div className="container px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">Ofisimizi Ziyaret Edin</h2>
-              <p className="text-muted-foreground">Maslak ofisimizde sizleri ağırlamaktan mutluluk duyarız</p>
+              <p className="text-muted-foreground">Merkez Mahallesi Namık Kemal Caddesi No:61/3 Avcılar/İstanbul</p>
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl h-96 bg-muted-foreground/10 flex items-center justify-center">
               <p className="text-muted-foreground">Harita buraya eklenecek</p>

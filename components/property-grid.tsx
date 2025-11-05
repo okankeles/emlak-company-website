@@ -1,185 +1,157 @@
 "use client"
 
-import { PropertyCard } from "@/components/property-card"
-import { Button } from "@/components/ui/button"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { LayoutGrid, List } from "lucide-react"
-import { useState } from "react"
+import { Card, CardContent } from "@/components/ui/card"
+import { MapPin, ChevronLeft, ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react"
 
 const allProperties = [
   {
     id: 1,
-    image: "/modern-luxury-apartment-interior-with-city-view.jpg",
-    title: "Lüks Rezidans Dairesi",
-    location: "Beşiktaş, İstanbul",
-    price: "12.500.000 ₺",
-    beds: 4,
-    baths: 3,
-    area: 250,
-    type: "Satılık",
-    features: ["Otopark", "Güvenlik", "Spor Salonu"],
-  },
-  {
-    id: 2,
-    image: "/contemporary-villa-with-pool-and-garden.jpg",
-    title: "Deniz Manzaralı Villa",
-    location: "Bodrum, Muğla",
-    price: "25.000.000 ₺",
-    beds: 5,
-    baths: 4,
-    area: 450,
-    type: "Satılık",
-    features: ["Havuz", "Bahçe", "Deniz Manzarası"],
-  },
-  {
-    id: 3,
-    image: "/modern-office-building-exterior-glass-facade.jpg",
-    title: "Ticari İşyeri",
-    location: "Maslak, İstanbul",
-    price: "8.750.000 ₺",
-    beds: 0,
-    baths: 2,
-    area: 180,
-    type: "Kiralık",
-    features: ["Otopark", "Güvenlik", "Merkezi Konum"],
-  },
-  {
-    id: 4,
-    image: "/modern-apartment-exterior.png",
-    title: "Yeni Proje Dairesi",
-    location: "Kadıköy, İstanbul",
-    price: "6.250.000 ₺",
-    beds: 3,
-    baths: 2,
-    area: 145,
-    type: "Satılık",
-    features: ["Otopark", "Asansör", "Balkon"],
-  },
-  {
-    id: 5,
-    image: "/luxury-penthouse-terrace-view.jpg",
-    title: "Çatı Katı Dubleks",
-    location: "Nişantaşı, İstanbul",
-    price: "18.900.000 ₺",
-    beds: 5,
-    baths: 4,
-    area: 320,
-    type: "Satılık",
-    features: ["Teras", "Jakuzi", "Şömine"],
-  },
-  {
-    id: 6,
-    image: "/seaside-villa-with-infinity-pool.jpg",
-    title: "Sahil Villa",
-    location: "Çeşme, İzmir",
-    price: "22.500.000 ₺",
-    beds: 6,
-    baths: 5,
-    area: 500,
-    type: "Satılık",
-    features: ["Havuz", "Özel Plaj", "Bahçe"],
-  },
-  {
-    id: 7,
-    image: "/modern-studio-apartment.png",
-    title: "Stüdyo Daire",
-    location: "Beyoğlu, İstanbul",
-    price: "3.750.000 ₺",
-    beds: 1,
-    baths: 1,
-    area: 55,
-    type: "Satılık",
-    features: ["Merkezi Konum", "Yeni Bina", "Asansör"],
-  },
-  {
-    id: 8,
-    image: "/luxury-residential-complex.png",
-    title: "Rezidans Kompleksi",
-    location: "Ataşehir, İstanbul",
-    price: "9.500.000 ₺",
-    beds: 3,
-    baths: 2,
-    area: 165,
-    type: "Satılık",
-    features: ["Havuz", "Spor Salonu", "Güvenlik"],
-  },
-  {
-    id: 9,
-    image: "/commercial-office-space-interior.jpg",
-    title: "Ofis Katı",
-    location: "Levent, İstanbul",
-    price: "15.000.000 ₺",
-    beds: 0,
-    baths: 3,
-    area: 280,
-    type: "Kiralık",
-    features: ["Otopark", "Güvenlik", "Merkezi Konum"],
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3c24da24-5d60-4b02-8832-a22324f8b849-xGOTQRaOAQkVedzRGdSqtv7xLeXdDI.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6531a370-927b-48ca-a485-486e236b23fc-euOFyr6R6J1d4ZFaiXZC4vQsTQTWy7.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/e8043269-b164-47cf-bae9-a5fc0a99a0db-NufANPpmJuPMxulpnNnwmZ6hUdcPOl.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7aabb3f7-e7fc-4686-b4b1-e739c9b8163b-UKwQLJrDIJK7UId7P8ucSmPv00UZff.jpg",
+    ],
+    title: "Proje 1",
+    location: "İstanbul",
+    projectType: "Daire",
+    unitCount: 48,
+    unitTypes: "2+1, 3+1",
+    area: "93 - 175 m²",
+    landArea: "5000 m²",
+    deliveryDate: "Aralık 2021",
+    salesStatus: "% 100 Satıldı",
+    description:
+      "Gül Yapı, Çebi Yapı ve Liv Yapı tarafından inşa edilen Gülpark Suits projesi 10 katlı tek blokta 48 daireden oluşuyor. Projede daireler dışında 5 ofis, 5 mağaza ve 1 süpermarket yer alıyor. Gülpark Suits'teki 2+1 daireler brüt 93 ila 140, net 69 ila 103 metrekare, 3+1 daireler brüt 174 ila 175, net 129 ila 130 metrekare olarak tasarlandı. İnşaat alanı 15 bin metrekare.",
   },
 ]
 
-export function PropertyGrid() {
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
+function ImageCarousel({ images }: { images: string[] }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [images.length])
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
+  }
+
+  const goToNext = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length)
+  }
 
   return (
-    <div className="space-y-6">
-      {/* Header with sorting and view options */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-border">
-        <p className="text-muted-foreground">
-          <span className="font-semibold text-foreground">{allProperties.length}</span> emlak bulundu
-        </p>
+    <div className="relative overflow-hidden h-80 lg:h-auto bg-muted group">
+      <img
+        src={images[currentImageIndex] || "/placeholder.svg"}
+        alt="Project image"
+        className="w-full h-full object-cover transition-opacity duration-700"
+      />
 
-        <div className="flex items-center gap-3">
-          <Select defaultValue="newest">
-            <SelectTrigger className="w-[180px]">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="newest">En Yeni</SelectItem>
-              <SelectItem value="price-low">Fiyat: Düşükten Yükseğe</SelectItem>
-              <SelectItem value="price-high">Fiyat: Yüksekten Düşüğe</SelectItem>
-              <SelectItem value="area">Alan: Büyükten Küçüğe</SelectItem>
-            </SelectContent>
-          </Select>
-
-          <div className="flex items-center gap-1 border border-border rounded-md p-1">
-            <Button
-              variant={viewMode === "grid" ? "secondary" : "ghost"}
-              size="sm"
-              onClick={() => setViewMode("grid")}
-              className="h-8 w-8 p-0"
-            >
-              <LayoutGrid size={16} />
-            </Button>
-            <Button
-              variant={viewMode === "list" ? "secondary" : "ghost"}
-              size="sm"
-              onClick={() => setViewMode("list")}
-              className="h-8 w-8 p-0"
-            >
-              <List size={16} />
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Property Grid */}
-      <div
-        className={viewMode === "grid" ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" : "flex flex-col gap-6"}
+      <button
+        onClick={goToPrevious}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+        aria-label="Previous image"
       >
-        {allProperties.map((property) => (
-          <PropertyCard key={property.id} property={property} viewMode={viewMode} />
+        <ChevronLeft size={24} />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+        aria-label="Next image"
+      >
+        <ChevronRight size={24} />
+      </button>
+
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImageIndex(index)}
+            className={`h-2 rounded-full transition-all ${
+              index === currentImageIndex ? "bg-white w-8" : "bg-white/50 w-2 hover:bg-white/75"
+            }`}
+            aria-label={`Go to image ${index + 1}`}
+          />
         ))}
       </div>
+    </div>
+  )
+}
 
-      {/* Pagination */}
-      <div className="flex items-center justify-center gap-2 pt-8">
-        <Button variant="outline" disabled>
-          Önceki
-        </Button>
-        <Button variant="secondary">1</Button>
-        <Button variant="outline">2</Button>
-        <Button variant="outline">3</Button>
-        <Button variant="outline">Sonraki</Button>
+export function PropertyGrid() {
+  return (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 gap-8">
+        {allProperties.map((property) => (
+          <Card
+            key={property.id}
+            className="overflow-hidden border-border hover:shadow-xl transition-all duration-300 group"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+              <ImageCarousel images={property.images} />
+
+              <CardContent className="p-8 flex flex-col justify-center">
+                <div className="mb-6">
+                  <div className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold mb-3">
+                    {property.projectType}
+                  </div>
+                  <h3 className="font-serif text-3xl font-bold text-primary mb-2">{property.title}</h3>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <MapPin size={16} />
+                    <span>{property.location}</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 mb-6 pb-6 border-b border-border">
+                  <div>
+                    <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+                      Konut Sayısı
+                    </p>
+                    <p className="text-lg font-bold text-primary">{property.unitCount}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+                      Konut Tipleri
+                    </p>
+                    <p className="text-lg font-bold text-primary">{property.unitTypes}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+                      Metrekare
+                    </p>
+                    <p className="text-lg font-bold text-primary">{property.area}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+                      Arsa Alanı
+                    </p>
+                    <p className="text-lg font-bold text-primary">{property.landArea}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+                      Teslim Tarihi
+                    </p>
+                    <p className="text-lg font-bold text-primary">{property.deliveryDate}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+                      Satış Durumu
+                    </p>
+                    <p className="text-lg font-bold text-primary">{property.salesStatus}</p>
+                  </div>
+                </div>
+
+                <p className="text-sm text-muted-foreground leading-relaxed">{property.description}</p>
+              </CardContent>
+            </div>
+          </Card>
+        ))}
       </div>
     </div>
   )

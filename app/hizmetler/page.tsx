@@ -2,56 +2,33 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import {
-  Home,
-  Building2,
-  Key,
-  TrendingUp,
-  FileText,
-  Shield,
-  Users,
-  Calculator,
-  CheckCircle2,
-  ArrowRight,
-} from "lucide-react"
+import { Building2, Key, TrendingUp, Calculator, CheckCircle2, ArrowRight, Shield, Users } from "lucide-react"
 
 const services = [
   {
-    icon: Home,
-    title: "Gayrimenkul Alım-Satım",
-    description:
-      "Konut, villa, arsa ve ticari gayrimenkul alım-satım işlemlerinizde profesyonel danışmanlık hizmeti sunuyoruz.",
-    features: ["Piyasa Analizi", "Değerleme Hizmeti", "Hukuki Danışmanlık", "Tapu İşlemleri"],
-  },
-  {
-    icon: Key,
-    title: "Kiralama Hizmetleri",
-    description: "Gayrimenkulünüzü kiraya vermek veya kiralamak için güvenilir ve hızlı çözümler sunuyoruz.",
-    features: ["Kiracı Bulma", "Kira Sözleşmesi", "Kira Takip Sistemi", "Emlak Yönetimi"],
-  },
-  {
     icon: Building2,
-    title: "İnşaat Projeleri",
-    description: "Modern mimari anlayışla tasarlanmış, kaliteli ve güvenli inşaat projeleri gerçekleştiriyoruz.",
+    title: "Kentsel Dönüşüm",
+    description:
+      "Modern mimari anlayışla tasarlanmış, kaliteli ve güvenli kentsel dönüşüm projeleri gerçekleştiriyoruz.",
     features: ["Proje Tasarımı", "İnşaat Yönetimi", "Kalite Kontrolü", "Anahtar Teslim"],
   },
   {
     icon: TrendingUp,
-    title: "Yatırım Danışmanlığı",
-    description: "Gayrimenkul yatırımlarınızda en karlı fırsatları değerlendirmeniz için uzman danışmanlık sağlıyoruz.",
-    features: ["Pazar Araştırması", "Yatırım Analizi", "Risk Değerlendirmesi", "Portföy Yönetimi"],
+    title: "İnşaat Projeleri",
+    description: "Yüksek standartlarda inşaat projeleri ile şehrin gelişimine katkı sağlıyoruz.",
+    features: ["Proje Tasarımı", "İnşaat Yönetimi", "Kalite Kontrolü", "Anahtar Teslim"],
   },
   {
-    icon: FileText,
-    title: "Hukuki Danışmanlık",
-    description: "Gayrimenkul işlemlerinizde hukuki süreçleri güvenle yönetmeniz için profesyonel destek sunuyoruz.",
-    features: ["Sözleşme Hazırlama", "Tapu İşlemleri", "İmar Danışmanlığı", "Hukuki Takip"],
+    icon: Key,
+    title: "Gayrimenkul Alım-Satım",
+    description: "Gayrimenkulünüzü satmak veya satın almak için profesyonel danışmanlık ve hızlı çözümler sunuyoruz.",
+    features: ["Piyasa Analizi", "Değerleme Hizmeti", "Hukuki Danışmanlık", "Tapu İşlemleri"],
   },
   {
     icon: Calculator,
-    title: "Değerleme Hizmetleri",
-    description: "Gayrimenkulünüzün gerçek değerini belirlemek için profesyonel değerleme hizmeti sunuyoruz.",
-    features: ["Piyasa Değeri Analizi", "Ekspertiz Raporu", "Banka Değerlemesi", "Sigorta Değerlemesi"],
+    title: "Kira Takip Sistemi",
+    description: "Gayrimenkullerinizin kira takibini kolaylaştıran, etkili ve güvenilir bir sistem.",
+    features: ["Otomatik Takip", "Raporlama", "Ödemeler", "Kiracı Yönetimi"],
   },
 ]
 
@@ -89,8 +66,7 @@ export default function ServicesPage() {
             <div className="max-w-3xl">
               <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 text-balance">Hizmetlerimiz</h1>
               <p className="text-lg text-primary-foreground/90 text-pretty leading-relaxed">
-                Gayrimenkul sektöründe ihtiyacınız olan tüm hizmetleri profesyonel ekibimizle sunuyoruz. Alım-satımdan
-                kiralamaYa, inşaattan yatırım danışmanlığına kadar geniş bir hizmet yelpazesi.
+                Gayrimenkul sektöründe ihtiyacınız olan temel hizmetleri profesyonel ekibimizle sunuyoruz.
               </p>
             </div>
           </div>
@@ -107,7 +83,7 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
                 <Card key={index} className="border-border hover:shadow-xl transition-all duration-300 group">
                   <CardContent className="p-8">
@@ -115,10 +91,10 @@ export default function ServicesPage() {
                       <service.icon className="w-8 h-8 text-accent group-hover:text-accent-foreground" />
                     </div>
                     <h3 className="font-serif text-2xl font-bold text-primary mb-4">{service.title}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+                    <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{service.description}</p>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <li key={idx} className="flex items-center gap-2 text-xs text-muted-foreground">
                           <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
@@ -174,12 +150,11 @@ export default function ServicesPage() {
                     {
                       icon: Shield,
                       title: "Güvenilir Hizmet",
-                      description:
-                        "15 yılı aşkın deneyimimiz ve binlerce mutlu müşterimizle güvenilir hizmet sunuyoruz.",
+                      description: "Uzun yılların deneyimi ile güvenilir hizmet sunuyoruz.",
                     },
                     {
                       icon: Users,
-                      title: "Uzman Ekip",
+                      title: "Profesyonel Ekip",
                       description: "Alanında uzman profesyonellerden oluşan ekibimizle her aşamada yanınızdayız.",
                     },
                     {
@@ -202,7 +177,11 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="relative">
-                <img src="/modern-real-estate-office-consultation.jpg" alt="Hizmetlerimiz" className="rounded-lg shadow-2xl w-full" />
+                <img
+                  src="/modern-real-estate-office-consultation.jpg"
+                  alt="Hizmetlerimiz"
+                  className="rounded-lg shadow-2xl w-full"
+                />
               </div>
             </div>
           </div>
