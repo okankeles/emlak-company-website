@@ -15,7 +15,7 @@ export function Footer() {
                 alt="ARS A Plus İnşaat"
                 width={50}
                 height={50}
-                className="object-contain brightness-0 invert"
+                className="object-contain"
               />
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-bold">ARS A Plus</span>
