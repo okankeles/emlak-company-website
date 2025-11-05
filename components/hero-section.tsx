@@ -43,15 +43,9 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="
-            absolute 
-            bottom-10          /* small screens */
-            md:bottom-16       /* tablet */
-            lg:bottom-24       /* desktop */
-            xl:bottom-32       /* large screen */
-            left-1/2 -translate-x-1/2 
-            pointer-events-none select-none
-          "
+          // Dinamik: dibe yakın; ekran yüksekliğine göre 1rem–3rem arası boşluk
+          className="absolute left-1/2 -translate-x-1/2 pointer-events-none select-none"
+          style={{ bottom: "clamp(1rem, 4vh, 3rem)" }}
           aria-hidden="true"
         >
           <motion.div
@@ -79,6 +73,9 @@ export function HeroSection() {
             </div>
           </motion.div>
         </motion.div>
+
+        {/* (İstersen responsive sınıf fallback'ı) */}
+        {/* <motion.div className="absolute bottom-6 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-14 2xl:bottom-16 left-1/2 -translate-x-1/2">...</motion.div> */}
       </div>
     </section>
   )
