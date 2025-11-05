@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aplus_insaat_circle-R6TQKVN7oMjMVsQ1MpZmcB5jKyFyBN.png"
+                src="/logo.png"
                 alt="ARS A Plus İnşaat"
                 width={50}
                 height={50}
@@ -101,10 +101,11 @@ export function Footer() {
           <div>
             <h3 className="font-serif text-lg font-bold mb-6">Hizmetlerimiz</h3>
             <ul className="space-y-3">
-              <li className="text-sm text-primary-foreground/80">Kentsel Dönüşüm</li>
-              <li className="text-sm text-primary-foreground/80">İnşaat Projeleri</li>
               <li className="text-sm text-primary-foreground/80">Gayrimenkul Alım-Satım</li>
+              <li className="text-sm text-primary-foreground/80">Konut Kiralama</li>
+              <li className="text-sm text-primary-foreground/80">İnşaat Projeleri</li>
               <li className="text-sm text-primary-foreground/80">Kira Takip Sistemi</li>
+              <li className="text-sm text-primary-foreground/80">Danışmanlık Hizmetleri</li>
             </ul>
           </div>
 
@@ -115,7 +116,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="flex-shrink-0 mt-1 text-accent" />
                 <span className="text-sm text-primary-foreground/80">
-                  Merkez Mahallesi Namık Kemal Caddesi No:61/3 Avcılar/İstanbul
+                  Maslak Mahallesi, Büyükdere Caddesi No:123, Sarıyer/İstanbul
                 </span>
               </li>
               <li className="flex items-center gap-3">
