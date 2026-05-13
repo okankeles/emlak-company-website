@@ -23,7 +23,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-6">
-              Kentsel dönüşüm ve modern mimaride Türkiye'nin güvenilir çözüm ortağınız.
+              Kentsel dönüşüm ve modern mimaride Türkiye&apos;nin güvenilir çözüm ortağı.
             </p>
             <div className="flex gap-4">
               <a
