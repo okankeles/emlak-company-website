@@ -16,9 +16,15 @@ export function CTASection() {
             Sorularınız ve projeleriniz için bizimle iletişime geçin. Profesyonel ekibimiz size en uygun çözümleri
             sunmaya hazır.
           </p>
-          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 py-6 group">
-            İletişime Geç
-            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+          <Button
+            asChild
+            size="lg"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 py-6 group"
+          >
+            <a href="https://wa.me/905425776583" target="_blank" rel="noopener noreferrer">
+              İletişime Geç
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+            </a>
           </Button>
         </div>
       </div>
