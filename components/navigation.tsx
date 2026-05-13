@@ -27,7 +27,7 @@ export function Navigation() {
               className="object-contain"
             />
             <div className="flex flex-col">
-              <span className="font-serif text-xl font-bold text-accent">ARS A Plus</span>
+              <span className="font-serif text-xl font-bold text-foreground">ARS A Plus</span>
               <span className="text-xs text-muted-foreground">İnşaat</span>
             </div>
           </Link>

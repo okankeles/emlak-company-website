@@ -27,7 +27,7 @@ export default function AboutPage() {
           <div className="container px-4 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-accent mb-6">Hikayemiz</h2>
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Hikayemiz</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     ARS A Plus İnşaat, gayrimenkul sektöründe uzun yılların deneyimi ile müşterilerine en kaliteli
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 <Card key={index} className="text-center border-border">
                   <CardContent className="pt-8 pb-6">
                     <stat.icon className="w-12 h-12 mx-auto mb-4 text-accent" />
-                    <div className="text-3xl md:text-4xl font-bold text-accent mb-2">{stat.value}</div>
+                    <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">{stat.value}</div>
                     <div className="text-sm text-muted-foreground">{stat.label}</div>
                   </CardContent>
                 </Card>
@@ -90,7 +90,7 @@ export default function AboutPage() {
               <Card className="border-border">
                 <CardContent className="pt-8 pb-6">
                   <Target className="w-12 h-12 text-accent mb-4" />
-                  <h3 className="font-serif text-2xl font-bold text-accent mb-4">Misyonumuz</h3>
+                  <h3 className="font-serif text-2xl font-bold text-foreground mb-4">Misyonumuz</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Kentsel dönüşüm projeleriyle şehrin dokusuna değer katmak, güvenli, estetik ve sürdürülebilir yaşam
                     alanları inşa etmek. Her adımda modern teknolojiyi ve güçlü iletişimi merkeze alarak, insan odaklı
@@ -102,7 +102,7 @@ export default function AboutPage() {
               <Card className="border-border">
                 <CardContent className="pt-8 pb-6">
                   <Eye className="w-12 h-12 text-accent mb-4" />
-                  <h3 className="font-serif text-2xl font-bold text-accent mb-4">Vizyonumuz</h3>
+                  <h3 className="font-serif text-2xl font-bold text-foreground mb-4">Vizyonumuz</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Geleceğin şehirlerini bugünden şekillendiren, yenilikçi ve güvenilir bir inşaat markası olmak.
                     Modern tasarım anlayışıyla, her projede kaliteyi, güveni ve sürdürülebilirliği ön planda tutmak.
@@ -113,7 +113,7 @@ export default function AboutPage() {
               <Card className="border-border">
                 <CardContent className="pt-8 pb-6">
                   <Heart className="w-12 h-12 text-accent mb-4" />
-                  <h3 className="font-serif text-2xl font-bold text-accent mb-4">Değerlerimiz</h3>
+                  <h3 className="font-serif text-2xl font-bold text-foreground mb-4">Değerlerimiz</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Güven, şeffaflık, müşteri odaklılık, kalite, yenilikçilik ve sürdürülebilirlik ilkelerimizle hareket
                     ederek her projede mükemmelliği hedefliyoruz.
@@ -128,7 +128,7 @@ export default function AboutPage() {
         <section className="py-20 bg-muted">
           <div className="container px-4 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-accent mb-4">Ekibimiz</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Ekibimiz</h2>
               <div className="w-24 h-1 bg-accent mx-auto mb-6" />
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
                 Alanında uzman profesyonellerden oluşan ekibimizle hizmetinizdeyiz
@@ -149,7 +149,7 @@ export default function AboutPage() {
                 ].map((member, index) => (
                   <Card key={index} className="border-border text-center">
                     <CardContent className="p-8">
-                      <h3 className="font-serif text-xl font-bold text-accent mb-2">{member.name}</h3>
+                      <h3 className="font-serif text-xl font-bold text-foreground mb-2">{member.name}</h3>
                       <p className="text-muted-foreground">{member.role}</p>
                     </CardContent>
                   </Card>

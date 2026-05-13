@@ -183,7 +183,7 @@ export function RentalDashboard() {
                 </div>
                 {stat.trend === "warning" && <AlertCircle className="w-5 h-5 text-yellow-600" />}
               </div>
-              <div className="text-3xl font-bold text-accent mb-1">{stat.value}</div>
+              <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
               <div className="text-sm text-muted-foreground mb-2">{stat.title}</div>
               <div className="text-xs text-muted-foreground">{stat.change}</div>
             </CardContent>
@@ -231,7 +231,7 @@ export function RentalDashboard() {
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-2">
                             <div>
-                              <h3 className="font-semibold text-accent mb-1">{property.name}</h3>
+                              <h3 className="font-semibold text-foreground mb-1">{property.name}</h3>
                               <p className="text-sm text-muted-foreground">{property.address}</p>
                             </div>
                             {getStatusBadge(property.status)}
@@ -292,12 +292,12 @@ export function RentalDashboard() {
                         <DollarSign className="w-5 h-5 text-accent" />
                       </div>
                       <div>
-                        <p className="font-medium text-accent">{payment.property}</p>
+                        <p className="font-medium text-foreground">{payment.property}</p>
                         <p className="text-sm text-muted-foreground">{payment.tenant}</p>
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="font-semibold text-accent">{payment.amount}</p>
+                      <p className="font-semibold text-foreground">{payment.amount}</p>
                       <p className="text-sm text-muted-foreground">{payment.date}</p>
                     </div>
                     {payment.status === "completed" ? (
