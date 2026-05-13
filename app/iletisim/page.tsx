@@ -29,7 +29,7 @@ export default function ContactPage() {
               {/* Contact Information */}
               <div className="lg:col-span-1 space-y-6">
                 <div>
-                  <h2 className="font-serif text-3xl font-bold text-primary mb-6">İletişim Bilgileri</h2>
+                  <h2 className="font-serif text-3xl font-bold text-accent mb-6">İletişim Bilgileri</h2>
                   <p className="text-muted-foreground mb-8 leading-relaxed">
                     Size en kısa sürede dönüş yapabilmemiz için lütfen iletişim formunu doldurun veya aşağıdaki iletişim
                     bilgilerinden bize ulaşın.
@@ -43,7 +43,7 @@ export default function ContactPage() {
                         <MapPin className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-primary mb-1">Adres</h3>
+                        <h3 className="font-semibold text-accent mb-1">Adres</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           Merkez Mahallesi Şirin Sokak No 14/3
                           <br />
@@ -57,7 +57,7 @@ export default function ContactPage() {
                         <Phone className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-primary mb-1">Telefon</h3>
+                        <h3 className="font-semibold text-accent mb-1">Telefon</h3>
                         <a
                           href="https://wa.me/905425776583"
                           target="_blank"
@@ -74,7 +74,7 @@ export default function ContactPage() {
                         <Mail className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-primary mb-1">E-posta</h3>
+                        <h3 className="font-semibold text-accent mb-1">E-posta</h3>
                         <p className="text-sm text-muted-foreground">arsaplusinsaat@gmail.com.tr</p>
                       </div>
                     </div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                         <Clock className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-primary mb-1">Çalışma Saatleri</h3>
+                        <h3 className="font-semibold text-accent mb-1">Çalışma Saatleri</h3>
                         <p className="text-sm text-muted-foreground">Pazartesi - Cuma: 09:00 - 18:00</p>
                         <p className="text-sm text-muted-foreground">Cumartesi: 10:00 - 16:00</p>
                         <p className="text-sm text-muted-foreground">Pazar: Kapalı</p>
@@ -98,7 +98,7 @@ export default function ContactPage() {
               <div className="lg:col-span-2">
                 <Card className="border-border">
                   <CardContent className="p-8">
-                    <h2 className="font-serif text-2xl font-bold text-primary mb-6">Bize Mesaj Gönderin</h2>
+                    <h2 className="font-serif text-2xl font-bold text-accent mb-6">Bize Mesaj Gönderin</h2>
                     <ContactForm />
                   </CardContent>
                 </Card>
@@ -111,7 +111,7 @@ export default function ContactPage() {
         <section className="py-20 bg-muted">
           <div className="container px-4 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">Ofisimizi Ziyaret Edin</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-accent mb-4">Ofisimizi Ziyaret Edin</h2>
               <p className="text-muted-foreground">Merkez Mahallesi Şirin Sokak No 14/3 AVCILAR/İSTANBUL</p>
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl h-96 bg-muted-foreground/10 flex items-center justify-center">

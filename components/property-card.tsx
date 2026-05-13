@@ -45,7 +45,7 @@ export function PropertyCard({ property, viewMode = "grid" }: PropertyCardProps)
           <CardContent className="flex-1 p-6">
             <div className="flex flex-col h-full justify-between">
               <div>
-                <h3 className="font-serif text-2xl font-bold mb-2 text-primary">{property.title}</h3>
+                <h3 className="font-serif text-2xl font-bold mb-2 text-accent">{property.title}</h3>
                 <div className="flex items-center gap-2 text-muted-foreground mb-4">
                   <MapPin size={16} />
                   <span className="text-sm">{property.location}</span>
@@ -117,7 +117,7 @@ export function PropertyCard({ property, viewMode = "grid" }: PropertyCardProps)
         </div>
       </div>
       <CardContent className="p-6">
-        <h3 className="font-serif text-xl font-bold mb-2 text-primary">{property.title}</h3>
+        <h3 className="font-serif text-xl font-bold mb-2 text-accent">{property.title}</h3>
         <div className="flex items-center gap-2 text-muted-foreground mb-4">
           <MapPin size={16} />
           <span className="text-sm">{property.location}</span>
