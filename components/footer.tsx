@@ -132,7 +132,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/60">© 2025 ARS A Plus İnşaat. Tüm hakları saklıdır.</p>
+            <p className="text-sm text-primary-foreground/60">© 2025 ARS APLUS İNŞAAT OTOMOTİV SANAYİ VE TİCARET LİMİTED ŞİRKETİ. Tüm hakları saklıdır.</p>
             <div className="flex gap-6">
               <Link href="/gizlilik" className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
                 Gizlilik Politikası

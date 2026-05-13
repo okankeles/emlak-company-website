@@ -13,17 +13,13 @@ const properties = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arsaplus-3-0Of2oRx20lk6TDM7ijSyIdi1MEnHPC.jpeg",
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arsaplus-4-pssNFokQA76gA6jzuvhoOieHbiCkJx.jpeg",
     ],
-    title: "Proje 1",
-    location: "İstanbul",
-    projectType: "Daire",
-    unitCount: 48,
-    unitTypes: "2+1, 3+1",
-    area: "93 - 175 m²",
-    landArea: "5000 m²",
-    deliveryDate: "Aralık 2021",
-    salesStatus: "% 100 Satıldı",
+    title: "Avcılar Merkez Mahallesi Kentsel Dönüşümü",
+    location: "Avcılar / İstanbul",
+    projectType: "KENTSEL DÖNÜŞÜM",
+    residentialCount: 10,
+    commercialCount: 1,
     description:
-      "Gül Yapı, Çebi Yapı ve Liv Yapı tarafından inşa edilen Gülpark Suits projesi 10 katlı tek blokta 48 daireden oluşuyor. Projede daireler dışında 5 ofis, 5 mağaza ve 1 süpermarket yer alıyor. Gülpark Suits'teki 2+1 daireler brüt 93 ila 140, net 69 ila 103 metrekare, 3+1 daireler brüt 174 ila 175, net 129 ila 130 metrekare olarak tasarlandı. Inşaat alanı 15 bin metrekare.",
+      "Avcılar Merkez Mahallesi'nde hayata geçirdiğimiz projemizi, 6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun kapsamında, yüksek kalite ve standartlarda, yerinde dönüşüm prensibiyle titizlikle sürdürüyoruz.\n\nAlanında uzman profesyonel ekibimiz ve kalite odaklı yaklaşımımızla, kentsel dönüşüm sürecimizi güvenli, modern ve sürdürülebilir yaşam alanları oluşturma hedefiyle hız kesmeden ilerletiyoruz.",
   },
 ]
 
@@ -123,48 +119,30 @@ export function FeaturedProperties() {
                     </div>
                   </div>
 
-                  {/* Project Specs Grid */}
+                  {/* Project Specs */}
                   <div className="grid grid-cols-2 gap-4 mb-6 pb-6 border-b border-border">
-                    <div>
-                      <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+                    <div className="bg-muted/50 rounded-lg p-4 text-center">
+                      <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-2">
                         Konut Sayısı
                       </p>
-                      <p className="text-lg font-bold text-primary">{property.unitCount}</p>
+                      <p className="text-3xl font-bold text-accent">{property.residentialCount}</p>
                     </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
-                        Konut Tipleri
+                    <div className="bg-muted/50 rounded-lg p-4 text-center">
+                      <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-2">
+                        Ticari Sayısı
                       </p>
-                      <p className="text-lg font-bold text-primary">{property.unitTypes}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
-                        Metrekare
-                      </p>
-                      <p className="text-lg font-bold text-primary">{property.area}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
-                        Arsa Alanı
-                      </p>
-                      <p className="text-lg font-bold text-primary">{property.landArea}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
-                        Teslim Tarihi
-                      </p>
-                      <p className="text-lg font-bold text-primary">{property.deliveryDate}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
-                        Satış Durumu
-                      </p>
-                      <p className="text-lg font-bold text-primary">{property.salesStatus}</p>
+                      <p className="text-3xl font-bold text-accent">{property.commercialCount}</p>
                     </div>
                   </div>
 
                   {/* Project Description */}
-                  <p className="text-sm text-muted-foreground leading-relaxed">{property.description}</p>
+                  <div className="space-y-3">
+                    {property.description.split("\n\n").map((paragraph, idx) => (
+                      <p key={idx} className="text-sm text-muted-foreground leading-relaxed text-pretty">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
                 </CardContent>
               </div>
             </Card>
