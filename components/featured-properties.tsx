@@ -8,10 +8,10 @@ const properties = [
   {
     id: 1,
     images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3c24da24-5d60-4b02-8832-a22324f8b849-xGOTQRaOAQkVedzRGdSqtv7xLeXdDI.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6531a370-927b-48ca-a485-486e236b23fc-euOFyr6R6J1d4ZFaiXZC4vQsTQTWy7.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/e8043269-b164-47cf-bae9-a5fc0a99a0db-NufANPpmJuPMxulpnNnwmZ6hUdcPOl.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7aabb3f7-e7fc-4686-b4b1-e739c9b8163b-UKwQLJrDIJK7UId7P8ucSmPv00UZff.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arsaplus-1-LuU718Q0hxcBZlpccPh4xQhIPPDJtd.jpeg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arsaplus-2-uKwD1hz8G6mozvP3pkwxpprvNTqeqA.jpeg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arsaplus-3-0Of2oRx20lk6TDM7ijSyIdi1MEnHPC.jpeg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arsaplus-4-pssNFokQA76gA6jzuvhoOieHbiCkJx.jpeg",
     ],
     title: "Proje 1",
     location: "İstanbul",
