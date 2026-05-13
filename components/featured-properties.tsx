@@ -16,7 +16,7 @@ const properties = [
     title: "Avcılar Merkez Mahallesi Kentsel Dönüşümü",
     location: "Avcılar / İstanbul",
     projectType: "KENTSEL DÖNÜŞÜM",
-    residentialCount: 10,
+    residentialCount: 11,
     commercialCount: 1,
     description:
       "Avcılar Merkez Mahallesi'nde hayata geçirdiğimiz projemizi, 6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun kapsamında, yüksek kalite ve standartlarda, yerinde dönüşüm prensibiyle titizlikle sürdürüyoruz.\n\nAlanında uzman profesyonel ekibimiz ve kalite odaklı yaklaşımımızla, kentsel dönüşüm sürecimizi güvenli, modern ve sürdürülebilir yaşam alanları oluşturma hedefiyle hız kesmeden ilerletiyoruz.",

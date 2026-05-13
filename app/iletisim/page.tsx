@@ -58,7 +58,14 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-primary mb-1">Telefon</h3>
-                        <p className="text-sm text-muted-foreground">+90 542 577 65 83</p>
+                        <a
+                          href="https://wa.me/905425776583"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          +90 542 577 65 83
+                        </a>
                       </div>
                     </div>
 
