@@ -89,7 +89,7 @@ export function FeaturedProperties() {
     <section className="py-24 bg-background">
       <div className="container px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">Projelerimiz</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-accent mb-4">Projelerimiz</h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Kentsel dönüşüm ve modern mimaride başarılı projelerimiz
@@ -112,7 +112,7 @@ export function FeaturedProperties() {
                     <div className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold mb-3">
                       {property.projectType}
                     </div>
-                    <h3 className="font-serif text-3xl font-bold text-primary mb-2">{property.title}</h3>
+                    <h3 className="font-serif text-3xl font-bold text-accent mb-2">{property.title}</h3>
                     <div className="flex items-center gap-2 text-muted-foreground">
                       <MapPin size={16} />
                       <span>{property.location}</span>

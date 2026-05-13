@@ -31,7 +31,7 @@ export function ServicesSection() {
     <section className="py-24 bg-muted/30">
       <div className="container px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">Hizmetlerimiz</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-accent mb-4">Hizmetlerimiz</h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" />
         </div>
 
@@ -45,7 +45,7 @@ export function ServicesSection() {
                 <div className="mb-4 inline-flex p-3 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
                   <service.icon size={28} />
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-3 text-primary">{service.title}</h3>
+                <h3 className="font-serif text-xl font-bold mb-3 text-accent">{service.title}</h3>
                 <div className="w-12 h-0.5 bg-accent mb-4" />
                 <p className="text-muted-foreground leading-relaxed text-sm">{service.description}</p>
               </CardContent>

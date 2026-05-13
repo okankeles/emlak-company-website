@@ -76,7 +76,7 @@ export default function ServicesPage() {
         <section className="py-20 bg-background">
           <div className="container px-4 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">Sunduğumuz Hizmetler</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-accent mb-4">Sunduğumuz Hizmetler</h2>
               <div className="w-24 h-1 bg-accent mx-auto mb-6" />
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
                 Gayrimenkul ihtiyaçlarınız için kapsamlı çözümler
@@ -90,7 +90,7 @@ export default function ServicesPage() {
                     <div className="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
                       <service.icon className="w-8 h-8 text-accent group-hover:text-accent-foreground" />
                     </div>
-                    <h3 className="font-serif text-2xl font-bold text-primary mb-4">{service.title}</h3>
+                    <h3 className="font-serif text-2xl font-bold text-accent mb-4">{service.title}</h3>
                     <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{service.description}</p>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
@@ -111,7 +111,7 @@ export default function ServicesPage() {
         <section className="py-20 bg-muted">
           <div className="container px-4 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">Çalışma Sürecimiz</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-accent mb-4">Çalışma Sürecimiz</h2>
               <div className="w-24 h-1 bg-accent mx-auto mb-6" />
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
                 Müşteri memnuniyeti odaklı, şeffaf ve profesyonel süreç
@@ -124,7 +124,7 @@ export default function ServicesPage() {
                   <Card className="border-border h-full">
                     <CardContent className="p-6">
                       <div className="text-6xl font-bold text-accent/20 mb-4">{item.step}</div>
-                      <h3 className="font-serif text-xl font-bold text-primary mb-3">{item.title}</h3>
+                      <h3 className="font-serif text-xl font-bold text-accent mb-3">{item.title}</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                     </CardContent>
                   </Card>
@@ -142,7 +142,7 @@ export default function ServicesPage() {
           <div className="container px-4 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6">
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-accent mb-6">
                   Neden Bizi Seçmelisiniz?
                 </h2>
                 <div className="space-y-6">
@@ -169,7 +169,7 @@ export default function ServicesPage() {
                         <item.icon className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-primary mb-2">{item.title}</h3>
+                        <h3 className="font-semibold text-accent mb-2">{item.title}</h3>
                         <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                       </div>
                     </div>
