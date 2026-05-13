@@ -168,8 +168,10 @@ export default function AboutPage() {
             <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto text-pretty">
               Profesyonel ekibimiz size en uygun projeyi bulmak için hazır
             </p>
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              İletişime Geç
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <a href="https://wa.me/905425776583" target="_blank" rel="noopener noreferrer">
+                İletişime Geç
+              </a>
             </Button>
           </div>
         </section>

@@ -11,11 +11,11 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aplus_insaat_circle-R6TQKVN7oMjMVsQ1MpZmcB5jKyFyBN.png"
+                src="/aplus_insaat_circle.png"
                 alt="ARS A Plus İnşaat"
                 width={50}
                 height={50}
-                className="object-contain brightness-0 invert"
+                className="object-contain"
               />
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-bold">ARS A Plus</span>
@@ -23,7 +23,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-6">
-              Kentsel dönüşüm ve modern mimaride Türkiye'nin güvenilir çözüm ortağınız.
+              Kentsel dönüşüm ve modern mimaride Türkiye&apos;nin güvenilir çözüm ortağı.
             </p>
             <div className="flex gap-4">
               <a
