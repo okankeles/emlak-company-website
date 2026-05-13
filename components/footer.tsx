@@ -11,11 +11,11 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <Image
-                src="/aplus_insaat_circle.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aplus_insaat_circle-R6TQKVN7oMjMVsQ1MpZmcB5jKyFyBN.png"
                 alt="ARS A Plus İnşaat"
                 width={50}
                 height={50}
-                className="object-contain"
+                className="object-contain brightness-0 invert"
               />
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-bold">ARS A Plus</span>
@@ -101,11 +101,10 @@ export function Footer() {
           <div>
             <h3 className="font-serif text-lg font-bold mb-6">Hizmetlerimiz</h3>
             <ul className="space-y-3">
-              <li className="text-sm text-primary-foreground/80">Gayrimenkul Alım-Satım</li>
-              <li className="text-sm text-primary-foreground/80">Konut Kiralama</li>
+              <li className="text-sm text-primary-foreground/80">Kentsel Dönüşüm</li>
               <li className="text-sm text-primary-foreground/80">İnşaat Projeleri</li>
+              <li className="text-sm text-primary-foreground/80">Gayrimenkul Alım-Satım</li>
               <li className="text-sm text-primary-foreground/80">Kira Takip Sistemi</li>
-              <li className="text-sm text-primary-foreground/80">Danışmanlık Hizmetleri</li>
             </ul>
           </div>
 
@@ -116,12 +115,12 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="flex-shrink-0 mt-1 text-accent" />
                 <span className="text-sm text-primary-foreground/80">
-                  Maslak Mahallesi, Büyükdere Caddesi No:123, Sarıyer/İstanbul
+                  Merkez Mahallesi Şirin Sokak No 14/3 AVCILAR/İSTANBUL
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="flex-shrink-0 text-accent" />
-                <span className="text-sm text-primary-foreground/80">+90 535 206 45 96</span>
+                <span className="text-sm text-primary-foreground/80">+90 542 577 65 83</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="flex-shrink-0 text-accent" />
