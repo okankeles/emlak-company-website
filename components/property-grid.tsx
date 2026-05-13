@@ -101,7 +101,7 @@ export function PropertyGrid() {
                   <div className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold mb-3">
                     {property.projectType}
                   </div>
-                  <h3 className="font-serif text-3xl font-bold text-accent mb-2">{property.title}</h3>
+                  <h3 className="font-serif text-3xl font-bold text-foreground mb-2">{property.title}</h3>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <MapPin size={16} />
                     <span>{property.location}</span>
@@ -113,37 +113,37 @@ export function PropertyGrid() {
                     <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
                       Konut Sayısı
                     </p>
-                    <p className="text-lg font-bold text-accent">{property.unitCount}</p>
+                    <p className="text-lg font-bold text-foreground">{property.unitCount}</p>
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
                       Konut Tipleri
                     </p>
-                    <p className="text-lg font-bold text-accent">{property.unitTypes}</p>
+                    <p className="text-lg font-bold text-foreground">{property.unitTypes}</p>
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
                       Metrekare
                     </p>
-                    <p className="text-lg font-bold text-accent">{property.area}</p>
+                    <p className="text-lg font-bold text-foreground">{property.area}</p>
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
                       Arsa Alanı
                     </p>
-                    <p className="text-lg font-bold text-accent">{property.landArea}</p>
+                    <p className="text-lg font-bold text-foreground">{property.landArea}</p>
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
                       Teslim Tarihi
                     </p>
-                    <p className="text-lg font-bold text-accent">{property.deliveryDate}</p>
+                    <p className="text-lg font-bold text-foreground">{property.deliveryDate}</p>
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
                       Satış Durumu
                     </p>
-                    <p className="text-lg font-bold text-accent">{property.salesStatus}</p>
+                    <p className="text-lg font-bold text-foreground">{property.salesStatus}</p>
                   </div>
                 </div>
 

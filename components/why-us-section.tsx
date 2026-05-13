@@ -30,7 +30,7 @@ export function WhyUsSection() {
     <section className="py-24 bg-background">
       <div className="container px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-accent mb-4">Neden Biz?</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Neden Biz?</h2>
           <div className="w-24 h-1 bg-accent mx-auto" />
         </div>
 
@@ -43,7 +43,7 @@ export function WhyUsSection() {
                 </div>
               </div>
               <div>
-                <h3 className="font-serif text-2xl font-bold mb-3 text-accent">{reason.title}</h3>
+                <h3 className="font-serif text-2xl font-bold mb-3 text-foreground">{reason.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{reason.description}</p>
               </div>
             </div>
