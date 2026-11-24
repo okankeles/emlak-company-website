@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState, useEffect } from "react"
@@ -18,6 +19,18 @@ const properties = [
     projectType: "KENTSEL DÖNÜŞÜM",
     residentialCount: 11,
     commercialCount: 1,
+    progressImages: [
+      {
+        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/avcilar_santiye_1_arsa-6MieqIXPCSQjcNc99Dzs94PQykxx1J.jpg",
+        title: "Yıkım ve Arsa Hazırlığı",
+        caption: "Eski yapının yıkımı tamamlandı, arsa temizlendi.",
+      },
+      {
+        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/avcilar_santiye_2_temel-Vo2lYIGOv5z4Jk7RBV7PTsIAb3BZT1.jpg",
+        title: "Kazı ve Temel Betonu",
+        caption: "Kazı tamamlandı, temel betonu döküldü.",
+      },
+    ],
     description:
       "Avcılar Merkez Mahallesi'nde hayata geçirdiğimiz projemizi, 6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun kapsamında, yüksek kalite ve standartlarda, yerinde dönüşüm prensibiyle titizlikle sürdürüyoruz.\n\nAlanında uzman profesyonel ekibimiz ve kalite odaklı yaklaşımımızla, kentsel dönüşüm sürecimizi güvenli, modern ve sürdürülebilir yaşam alanları oluşturma hedefiyle hız kesmeden ilerletiyoruz.",
   },
@@ -144,6 +157,39 @@ export function FeaturedProperties() {
                     ))}
                   </div>
                 </CardContent>
+              </div>
+
+              <div className="border-t border-border px-8 py-8">
+                <div className="mb-6 flex flex-wrap items-center gap-3">
+                  <h4 className="font-serif text-2xl font-semibold text-foreground">İnşaat Süreci</h4>
+                  <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+                    Devam Ediyor
+                  </span>
+                </div>
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  {property.progressImages.map((image, index) => (
+                    <article key={image.src}>
+                      <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+                        <Image
+                          src={image.src}
+                          alt={`Avcılar Merkez Mahallesi kentsel dönüşüm şantiyesi - ${image.title.toLocaleLowerCase("tr-TR")} aşaması`}
+                          fill
+                          sizes="(min-width: 768px) 50vw, 100vw"
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="mt-4 flex items-start gap-3">
+                        <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <div className="border-l border-accent/50 pl-3">
+                          <h5 className="font-semibold text-foreground">{image.title}</h5>
+                          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{image.caption}</p>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
               </div>
             </Card>
           ))}
