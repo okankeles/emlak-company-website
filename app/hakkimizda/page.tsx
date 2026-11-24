@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -47,11 +48,15 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="relative">
-                <img
-                  src="/modern-office-team-meeting.jpg"
-                  alt="ARS A Plus İnşaat Ekibi"
-                  className="rounded-lg shadow-2xl w-full"
-                />
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-2xl">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ofis_2-zUWHoss5VqyQD8NApBop2MkCVEZOtO.jpg"
+                    alt="ARS A Plus İnşaat Avcılar ofisi"
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
                 <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground p-8 rounded-lg shadow-xl">
                   <div className="text-4xl font-bold mb-2">15+</div>
                   <div className="text-sm">Yıllık Deneyim</div>
