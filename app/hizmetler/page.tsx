@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
@@ -176,11 +177,13 @@ export default function ServicesPage() {
                   ))}
                 </div>
               </div>
-              <div className="relative">
-                <img
-                  src="/modern-real-estate-office-consultation.jpg"
-                  alt="Hizmetlerimiz"
-                  className="rounded-lg shadow-2xl w-full"
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-2xl">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ofis_1-LVFRYfFxfQzMT7BAqQtgHCwagPF7Mq.jpg"
+                  alt="ARS A Plus İnşaat ofisi görüşme alanı"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
                 />
               </div>
             </div>
