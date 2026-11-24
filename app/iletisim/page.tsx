@@ -1,5 +1,7 @@
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/contact-form"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
@@ -114,8 +116,57 @@ export default function ContactPage() {
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Ofisimizi Ziyaret Edin</h2>
               <p className="text-muted-foreground">Merkez Mahallesi Şirin Sokak No 14/3 AVCILAR/İSTANBUL</p>
             </div>
-            <div className="rounded-lg overflow-hidden shadow-xl h-96 bg-muted-foreground/10 flex items-center justify-center">
-              <p className="text-muted-foreground">Harita buraya eklenecek</p>
+            <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
+              <div className="flex flex-col gap-5">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ofis_2-ZUXu66X0PPeup2W3CivdtQds2wjZvv.jpg"
+                    alt="ARS A Plus İnşaat Avcılar ofisi - karşılama alanı"
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ofis_1-5FRzEnkAyVJx23UeC0ONrzJdniKxcG.jpg"
+                    alt="ARS A Plus İnşaat Avcılar ofisi - çalışma alanı"
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Avcılar&apos;daki ofisimizde sizi ağırlamaktan memnuniyet duyarız. Ziyaretinizden önce WhatsApp üzerinden
+                  randevu almanızı öneririz.
+                </p>
+              </div>
+
+              <div className="flex h-full flex-col gap-4">
+                <iframe
+                  title="ARS A Plus İnşaat ofis konumu"
+                  src="https://www.google.com/maps?q=Merkez+Mahallesi+%C5%9Eirin+Sokak+No+14+Avc%C4%B1lar+%C4%B0stanbul&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-full min-h-[400px] w-full rounded-lg border-0"
+                />
+                <div className="flex flex-wrap gap-3">
+                  <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=Merkez+Mahallesi+%C5%9Eirin+Sokak+No+14+Avc%C4%B1lar+%C4%B0stanbul"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Yol Tarifi Al
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline">
+                    <a href="https://wa.me/905425776583" target="_blank" rel="noopener noreferrer">
+                      WhatsApp&apos;tan Yazın
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
