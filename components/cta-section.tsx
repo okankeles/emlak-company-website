@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 export function CTASection() {
   return (
@@ -21,7 +22,7 @@ export function CTASection() {
             size="lg"
             className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 py-6 group"
           >
-            <a href="https://wa.me/905425776583" target="_blank" rel="noopener noreferrer">
+            <a href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer">
               İletişime Geç
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </a>

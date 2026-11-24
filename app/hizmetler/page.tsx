@@ -1,9 +1,12 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import { Building2, Key, TrendingUp, Calculator, CheckCircle2, ArrowRight, Shield, Users } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 const services = [
   {
@@ -28,7 +31,7 @@ const services = [
   {
     icon: Calculator,
     title: "Kira Takip Sistemi",
-    description: "Gayrimenkullerinizin kira takibini kolaylaştıran, etkili ve güvenilir bir sistem.",
+    description: "Gayrimenkullerinizin kira takibini kolaylaştıracak dijital sistemimiz çok yakında hizmetinizde.",
     features: ["Otomatik Takip", "Raporlama", "Ödemeler", "Kiracı Yönetimi"],
   },
 ]
@@ -91,7 +94,14 @@ export default function ServicesPage() {
                     <div className="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
                       <service.icon className="w-8 h-8 text-accent group-hover:text-accent-foreground" />
                     </div>
-                    <h3 className="font-serif text-2xl font-bold text-foreground mb-4">{service.title}</h3>
+                    <h3 className="mb-4 font-serif text-2xl font-bold text-foreground">
+                      {service.title}
+                      {service.title === "Kira Takip Sistemi" && (
+                        <Badge className="ml-2 align-middle rounded-full border-transparent bg-accent text-accent-foreground hover:bg-accent">
+                          Yakında
+                        </Badge>
+                      )}
+                    </h3>
                     <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{service.description}</p>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
@@ -180,7 +190,7 @@ export default function ServicesPage() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-2xl">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ofis_1-LVFRYfFxfQzMT7BAqQtgHCwagPF7Mq.jpg"
-                  alt="ARS A Plus İnşaat ofisi görüşme alanı"
+                  alt={`${siteConfig.companyFullName} ofisi görüşme alanı`}
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
@@ -199,8 +209,8 @@ export default function ServicesPage() {
             <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto text-pretty">
               Uzman ekibimiz size en uygun çözümü sunmak için hazır
             </p>
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              Bize Ulaşın
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link href="/iletisim">Bize Ulaşın</Link>
             </Button>
           </div>
         </section>

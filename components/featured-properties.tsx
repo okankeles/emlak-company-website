@@ -36,16 +36,18 @@ const properties = [
   },
 ]
 
-function ImageCarousel({ images }: { images: string[] }) {
+function ImageCarousel({ images, projectTitle }: { images: string[]; projectTitle: string }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
 
-  // Auto-rotate images every 5 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (isHovered || images.length < 2) return
+
+    const timeout = setTimeout(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length)
     }, 5000)
-    return () => clearInterval(interval)
-  }, [images.length])
+    return () => clearTimeout(timeout)
+  }, [currentImageIndex, images.length, isHovered])
 
   const goToPrevious = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
@@ -56,25 +58,29 @@ function ImageCarousel({ images }: { images: string[] }) {
   }
 
   return (
-    <div className="relative overflow-hidden h-80 lg:h-auto bg-muted group">
+    <div
+      className="relative overflow-hidden h-80 lg:h-auto bg-muted group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Main Image */}
       <img
         src={images[currentImageIndex] || "/placeholder.svg"}
-        alt="Project image"
+        alt={`${projectTitle} - görsel ${currentImageIndex + 1}`}
         className="w-full h-full object-cover transition-opacity duration-700"
       />
 
       {/* Navigation Buttons */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100 focus-visible:opacity-100"
         aria-label="Previous image"
       >
         <ChevronLeft size={24} />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100 focus-visible:opacity-100"
         aria-label="Next image"
       >
         <ChevronRight size={24} />
@@ -89,7 +95,7 @@ function ImageCarousel({ images }: { images: string[] }) {
             className={`h-2 rounded-full transition-all ${
               index === currentImageIndex ? "bg-white w-8" : "bg-white/50 w-2 hover:bg-white/75"
             }`}
-            aria-label={`Go to image ${index + 1}`}
+            aria-label={`${projectTitle} - görsel ${index + 1}`}
           />
         ))}
       </div>
@@ -97,17 +103,19 @@ function ImageCarousel({ images }: { images: string[] }) {
   )
 }
 
-export function FeaturedProperties() {
+export function FeaturedProperties({ showHeading = true }: { showHeading?: boolean }) {
   return (
     <section className="py-24 bg-background">
       <div className="container px-4 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Projelerimiz</h2>
-          <div className="w-24 h-1 bg-accent mx-auto mb-6" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Kentsel dönüşüm ve modern mimaride başarılı projelerimiz
-          </p>
-        </div>
+        {showHeading && (
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Projelerimiz</h2>
+            <div className="w-24 h-1 bg-accent mx-auto mb-6" />
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              Kentsel dönüşüm ve modern mimaride başarılı projelerimiz
+            </p>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
           {properties.map((property) => (
@@ -117,7 +125,7 @@ export function FeaturedProperties() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 {/* Project Image */}
-                <ImageCarousel images={property.images} />
+                <ImageCarousel images={property.images} projectTitle={property.title} />
 
                 {/* Project Details */}
                 <CardContent className="p-8 flex flex-col justify-center">
@@ -136,13 +144,13 @@ export function FeaturedProperties() {
                   <div className="grid grid-cols-2 gap-4 mb-6 pb-6 border-b border-border">
                     <div className="bg-muted/50 rounded-lg p-4 text-center">
                       <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-2">
-                        Konut Sayısı
+                        Konut
                       </p>
                       <p className="text-3xl font-bold text-foreground">{property.residentialCount}</p>
                     </div>
                     <div className="bg-muted/50 rounded-lg p-4 text-center">
                       <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-2">
-                        Ticari Sayısı
+                        Ticari Birim
                       </p>
                       <p className="text-3xl font-bold text-foreground">{property.commercialCount}</p>
                     </div>

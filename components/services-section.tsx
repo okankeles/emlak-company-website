@@ -22,13 +22,13 @@ const services = [
   {
     icon: FileCheck,
     title: "Kira Takip Sistemi",
-    description: "Dijital kira takip sistemimiz ile tüm süreçlerinizi kolayca yönetin. 7/24 online erişim imkanı.",
+    description: "Dijital kira takip sistemimiz çok yakında hizmetinizde.",
   },
 ]
 
 export function ServicesSection() {
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="hizmetlerimiz" className="py-24 bg-muted/30">
       <div className="container px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Hizmetlerimiz</h2>
