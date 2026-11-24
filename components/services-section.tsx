@@ -22,7 +22,7 @@ const services = [
   {
     icon: FileCheck,
     title: "Kira Takip Sistemi",
-    description: "Dijital kira takip sistemimiz ile tüm süreçlerinizi kolayca yönetin. 7/24 online erişim imkanı.",
+    description: "Dijital kira takip sistemimiz çok yakında hizmetinizde.",
   },
 ]
 
