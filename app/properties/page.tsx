@@ -18,7 +18,7 @@ export default function PropertiesPage() {
         </section>
 
         {/* Main Content */}
-        <FeaturedProperties />
+        <FeaturedProperties showHeading={false} />
       </div>
       <Footer />
     </main>
