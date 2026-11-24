@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Instagram, Mail, Phone, MapPin } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 export function Footer() {
   return (
@@ -12,14 +13,14 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <Image
                 src="/aplus_insaat_circle.png"
-                alt="ARS A Plus İnşaat"
+                alt={siteConfig.companyFullName}
                 width={50}
                 height={50}
                 className="object-contain"
               />
               <div className="flex flex-col">
-                <span className="font-serif text-xl font-bold">ARS A Plus</span>
-                <span className="text-xs text-primary-foreground/70">İnşaat</span>
+                <span className="font-serif text-xl font-bold">{siteConfig.companyName}</span>
+                <span className="text-xs text-primary-foreground/70">{siteConfig.companyCategory}</span>
               </div>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-6">
@@ -27,7 +28,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/ars_aplus?igsh=c2ljd3M4OWdwMGYy&utm_source=qr"
+                href={siteConfig.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -36,7 +37,7 @@ export function Footer() {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://wa.me/905425776583"
+                href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -104,10 +105,26 @@ export function Footer() {
           <div>
             <h3 className="font-serif text-lg font-bold mb-6">Hizmetlerimiz</h3>
             <ul className="space-y-3">
-              <li className="text-sm text-primary-foreground/80">Kentsel Dönüşüm</li>
-              <li className="text-sm text-primary-foreground/80">İnşaat Projeleri</li>
-              <li className="text-sm text-primary-foreground/80">Gayrimenkul Alım-Satım</li>
-              <li className="text-sm text-primary-foreground/80">Kira Takip Sistemi</li>
+              <li>
+                <Link href="/hizmetler" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Kentsel Dönüşüm
+                </Link>
+              </li>
+              <li>
+                <Link href="/hizmetler" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  İnşaat Projeleri
+                </Link>
+              </li>
+              <li>
+                <Link href="/hizmetler" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Gayrimenkul Alım-Satım
+                </Link>
+              </li>
+              <li>
+                <Link href="/hizmetler" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Kira Takip Sistemi
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -118,23 +135,21 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="flex-shrink-0 mt-1 text-accent" />
                 <span className="text-sm text-primary-foreground/80">
-                  Merkez Mahallesi Şirin Sokak No 14/3 AVCILAR/İSTANBUL
+                  {siteConfig.address.full}
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="flex-shrink-0 text-accent" />
                 <a
-                  href="https://wa.me/905425776583"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={siteConfig.phone.href}
                   className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  +90 542 577 65 83
+                  {siteConfig.phone.display}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="flex-shrink-0 text-accent" />
-                <span className="text-sm text-primary-foreground/80">arsaplusinsaat@gmail.com.tr</span>
+                <span className="text-sm text-primary-foreground/80">{siteConfig.email}</span>
               </li>
             </ul>
           </div>
@@ -142,7 +157,9 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/60">© 2025 ARS APLUS İNŞAAT OTOMOTİV SANAYİ VE TİCARET LİMİTED ŞİRKETİ. Tüm hakları saklıdır.</p>
+            <p className="text-sm text-primary-foreground/60">
+              © {new Date().getFullYear()} {siteConfig.legalCompanyName}. Tüm hakları saklıdır.
+            </p>
             <div className="flex gap-6">
               <Link href="/gizlilik" className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
                 Gizlilik Politikası

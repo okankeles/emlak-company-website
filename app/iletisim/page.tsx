@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/contact-form"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 export default function ContactPage() {
   return (
@@ -47,9 +48,9 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Adres</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Merkez Mahallesi Şirin Sokak No 14/3
+                          {siteConfig.address.line1}
                           <br />
-                          AVCILAR/İSTANBUL
+                          {siteConfig.address.line2}
                         </p>
                       </div>
                     </div>
@@ -61,12 +62,10 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Telefon</h3>
                         <a
-                          href="https://wa.me/905425776583"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href={siteConfig.phone.href}
                           className="text-sm text-muted-foreground hover:text-accent transition-colors"
                         >
-                          +90 542 577 65 83
+                          {siteConfig.phone.display}
                         </a>
                       </div>
                     </div>
@@ -77,7 +76,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">E-posta</h3>
-                        <p className="text-sm text-muted-foreground">arsaplusinsaat@gmail.com.tr</p>
+                        <p className="text-sm text-muted-foreground">{siteConfig.email}</p>
                       </div>
                     </div>
 
@@ -114,14 +113,14 @@ export default function ContactPage() {
           <div className="container px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Ofisimizi Ziyaret Edin</h2>
-              <p className="text-muted-foreground">Merkez Mahallesi Şirin Sokak No 14/3 AVCILAR/İSTANBUL</p>
+              <p className="text-muted-foreground">{siteConfig.address.full}</p>
             </div>
             <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
               <div className="flex flex-col gap-5">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ofis_2-ZUXu66X0PPeup2W3CivdtQds2wjZvv.jpg"
-                    alt="ARS A Plus İnşaat Avcılar ofisi - karşılama alanı"
+                    alt={`${siteConfig.companyFullName} Avcılar ofisi - karşılama alanı`}
                     fill
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     className="object-cover"
@@ -130,7 +129,7 @@ export default function ContactPage() {
                 <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ofis_1-5FRzEnkAyVJx23UeC0ONrzJdniKxcG.jpg"
-                    alt="ARS A Plus İnşaat Avcılar ofisi - çalışma alanı"
+                    alt={`${siteConfig.companyFullName} Avcılar ofisi - çalışma alanı`}
                     fill
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     className="object-cover"
@@ -144,8 +143,8 @@ export default function ContactPage() {
 
               <div className="flex h-full flex-col gap-4">
                 <iframe
-                  title="ARS A Plus İnşaat ofis konumu"
-                  src="https://www.google.com/maps?q=Merkez+Mahallesi+%C5%9Eirin+Sokak+No+14+Avc%C4%B1lar+%C4%B0stanbul&output=embed"
+                  title={`${siteConfig.companyFullName} ofis konumu`}
+                  src={siteConfig.googleMapsEmbedUrl}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="h-full min-h-[400px] w-full rounded-lg border-0"
@@ -153,7 +152,7 @@ export default function ContactPage() {
                 <div className="flex flex-wrap gap-3">
                   <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
                     <a
-                      href="https://www.google.com/maps/dir/?api=1&destination=Merkez+Mahallesi+%C5%9Eirin+Sokak+No+14+Avc%C4%B1lar+%C4%B0stanbul"
+                      href={siteConfig.googleMapsDirectionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -161,7 +160,7 @@ export default function ContactPage() {
                     </a>
                   </Button>
                   <Button asChild variant="outline">
-                    <a href="https://wa.me/905425776583" target="_blank" rel="noopener noreferrer">
+                    <a href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer">
                       WhatsApp&apos;tan Yazın
                     </a>
                   </Button>

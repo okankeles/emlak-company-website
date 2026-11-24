@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Playfair_Display, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import { siteConfig } from "@/lib/site-config"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "ARS A Plus İnşaat | Emlak ve İnşaat Hizmetleri",
+  title: `${siteConfig.companyFullName} | Emlak ve İnşaat Hizmetleri`,
   description:
     "Türkiye'nin prestijli projelerinde yerinizi alın. Gayrimenkul alım-satım, kiralama ve inşaat hizmetleri.",
   generator: "v0.app",

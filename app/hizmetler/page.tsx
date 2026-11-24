@@ -1,10 +1,12 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Building2, Key, TrendingUp, Calculator, CheckCircle2, ArrowRight, Shield, Users } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 const services = [
   {
@@ -188,7 +190,7 @@ export default function ServicesPage() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-2xl">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ofis_1-LVFRYfFxfQzMT7BAqQtgHCwagPF7Mq.jpg"
-                  alt="ARS A Plus İnşaat ofisi görüşme alanı"
+                  alt={`${siteConfig.companyFullName} ofisi görüşme alanı`}
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
@@ -207,8 +209,8 @@ export default function ServicesPage() {
             <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto text-pretty">
               Uzman ekibimiz size en uygun çözümü sunmak için hazır
             </p>
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              Bize Ulaşın
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link href="/iletisim">Bize Ulaşın</Link>
             </Button>
           </div>
         </section>

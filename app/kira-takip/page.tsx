@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 import { DollarSign, Clock, FileText, TrendingUp } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 const upcomingFeatures = [
   { icon: DollarSign, title: "Ödeme Takibi" },
@@ -42,7 +43,7 @@ export default function RentalTrackingPage() {
 
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 <a
-                  href="https://wa.me/905425776583?text=Kira%20Takip%20Sistemi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum"
+                  href={`${siteConfig.whatsappUrl}?text=${encodeURIComponent("Kira Takip Sistemi hakkında bilgi almak istiyorum")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

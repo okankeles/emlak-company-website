@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Award, Users, Building2, TrendingUp, Target, Eye, Heart } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 export default function AboutPage() {
   return (
@@ -16,7 +17,7 @@ export default function AboutPage() {
             <div className="max-w-3xl">
               <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 text-balance">Hakkımızda</h1>
               <p className="text-lg text-primary-foreground/90 text-pretty leading-relaxed">
-                ARS A Plus İnşaat olarak, Türkiye'nin en prestijli gayrimenkul projelerinde yerinizi almanız için
+                {siteConfig.companyFullName} olarak, Türkiye'nin en prestijli gayrimenkul projelerinde yerinizi almanız için
                 çalışıyoruz. Yılların deneyimi ve güvenilir hizmet anlayışımızla yanınızdayız.
               </p>
             </div>
@@ -31,7 +32,7 @@ export default function AboutPage() {
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Hikayemiz</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    ARS A Plus İnşaat, gayrimenkul sektöründe uzun yılların deneyimi ile müşterilerine en kaliteli
+                    {siteConfig.companyFullName}, gayrimenkul sektöründe uzun yılların deneyimi ile müşterilerine en kaliteli
                     hizmeti sunmayı ilke edinmiş bir şirkettir. Kuruluşumuzdan bu yana, müşteri memnuniyetini ön planda
                     tutarak sektörde öncü bir konuma geldik.
                   </p>
@@ -51,7 +52,7 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-2xl">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ofis_2-zUWHoss5VqyQD8NApBop2MkCVEZOtO.jpg"
-                    alt="ARS A Plus İnşaat Avcılar ofisi"
+                    alt={`${siteConfig.companyFullName} Avcılar ofisi`}
                     fill
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     className="object-cover"
@@ -174,7 +175,7 @@ export default function AboutPage() {
               Profesyonel ekibimiz size en uygun projeyi bulmak için hazır
             </p>
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <a href="https://wa.me/905425776583" target="_blank" rel="noopener noreferrer">
+              <a href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer">
                 İletişime Geç
               </a>
             </Button>
